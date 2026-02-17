@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scotland & Lakes Family Adventure 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2D4A3E;--moss:#4A7C59;--sage:#8FBC8F;--sand:#E8DCC8;--cream:#FAF7F2;--slate:#3B4252;--storm:#5E6B7A;--ember:#C75B39;--gold:#D4A843;--sky:#6FA8C7;--rock:#8B7D6B;--white:#FFFFFF;--shadow:rgba(45,74,62,0.12);--radius:12px;--radius-lg:20px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--slate);line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;background:linear-gradient(165deg,var(--pine) 0%,#1a3a2f 40%,#2a4a4a 70%,var(--storm) 100%);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 800px 400px at 20% 80%,rgba(74,124,89,0.3),transparent),radial-gradient(ellipse 600px 300px at 80% 20%,rgba(111,168,199,0.2),transparent)}
+.hero-mountains{position:absolute;bottom:0;left:0;right:0;height:35%;overflow:hidden}
+.mountain{position:absolute;bottom:0;width:0;height:0;border-style:solid}
+.mountain-1{left:-5%;border-width:0 400px 280px 350px;border-color:transparent transparent rgba(45,74,62,0.4) transparent}
+.mountain-2{left:15%;border-width:0 350px 320px 300px;border-color:transparent transparent rgba(45,74,62,0.55) transparent}
+.mountain-3{left:45%;border-width:0 500px 250px 450px;border-color:transparent transparent rgba(45,74,62,0.35) transparent}
+.mountain-4{right:-10%;border-width:0 300px 300px 400px;border-color:transparent transparent rgba(45,74,62,0.5) transparent}
+.hero-content{position:relative;z-index:2;max-width:800px;animation:fadeUp 1s ease-out}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);padding:8px 20px;border-radius:50px;color:var(--sage);font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:1.5rem}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2.5rem,7vw,5rem);color:var(--white);line-height:1.1;margin-bottom:1rem}
+.hero h1 span{color:var(--gold)}
+.hero-subtitle{font-size:1.2rem;color:rgba(255,255,255,0.7);font-weight:300;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat-value{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:600;color:var(--gold)}
+.hero-stat-label{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1.5px}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.4);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* NAV */
+.sticky-nav{position:sticky;top:0;z-index:100;background:rgba(250,247,242,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(45,74,62,0.1);padding:0.75rem 0}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:0.5rem;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-link{font-size:0.82rem;font-weight:600;color:var(--storm);text-decoration:none;white-space:nowrap;padding:6px 14px;border-radius:50px;transition:all 0.2s;letter-spacing:0.5px;cursor:pointer;border:none;background:none;font-family:'Source Sans 3',sans-serif;-webkit-appearance:none}
+.nav-link:hover,.nav-link.active{background:var(--pine);color:var(--white)}
+
+/* SECTIONS */
+.section-wrap{max-width:1100px;margin:0 auto;padding:5rem 1.5rem 3rem}
+.section-wrap-narrow{max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem}
+.section-header{text-align:center;margin-bottom:3rem}
+.section-label{font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--moss);margin-bottom:0.5rem}
+.section-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--pine)}
+
+/* ROUTE TIMELINE */
+.route-timeline{position:relative;display:flex;flex-wrap:wrap;justify-content:center;padding:1.5rem 0}
+.route-line{position:absolute;top:50%;left:5%;right:5%;height:3px;background:linear-gradient(90deg,var(--moss),var(--sky),var(--ember),var(--gold),var(--moss));border-radius:2px;z-index:0}
+.route-stop{position:relative;z-index:1;text-align:center;flex:1 1 90px;max-width:110px;padding:0.75rem 0.2rem}
+.route-dot{width:46px;height:46px;border-radius:50%;margin:0 auto 0.6rem;display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:3px solid var(--cream);box-shadow:0 2px 12px var(--shadow);transition:transform 0.3s}
+.route-stop:hover .route-dot{transform:scale(1.15)}
+.route-dot.start{background:var(--pine)}.route-dot.family{background:var(--sky)}.route-dot.highland{background:var(--moss)}.route-dot.adventure{background:var(--ember)}.route-dot.lake{background:var(--gold)}
+.route-stop-name{font-weight:700;font-size:0.75rem;color:var(--slate);margin-bottom:1px}
+.route-stop-days{font-size:0.65rem;color:var(--storm)}
+
+/* VISUAL MAP CARD */
+.map-section{max-width:1100px;margin:0 auto;padding:0 1.5rem 5rem}
+.map-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 24px var(--shadow);border:1px solid rgba(45,74,62,0.06)}
+.map-card-header{padding:1.5rem 2rem;background:var(--pine);color:var(--white);text-align:center}
+.map-card-header h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.5rem}
+.map-card-header p{font-size:0.85rem;opacity:0.7}
+
+.map-visual{padding:2rem;background:linear-gradient(135deg,#e8f4e8,#dceef5,#f0e8d8);position:relative;min-height:320px;display:flex;align-items:center;justify-content:center}
+.map-route-visual{display:flex;flex-direction:column;gap:0;width:100%;max-width:700px}
+.map-leg{display:flex;align-items:stretch;gap:0}
+.map-leg-line{width:3px;background:var(--moss);margin:0 18px;flex-shrink:0;position:relative}
+.map-leg-line::before{content:'';position:absolute;top:-4px;left:-4px;width:11px;height:11px;background:var(--moss);border-radius:50%;border:2px solid var(--white)}
+.map-leg:last-child .map-leg-line::after{content:'';position:absolute;bottom:-4px;left:-4px;width:11px;height:11px;background:var(--ember);border-radius:50%;border:2px solid var(--white)}
+.map-leg-stops{flex:1;padding:0 0 1.5rem}
+.map-leg-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--moss);margin-bottom:6px}
+.map-stop-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:0.88rem;color:var(--slate)}
+.map-stop-row .stop-emoji{font-size:1rem;width:24px;text-align:center;flex-shrink:0}
+.map-stop-row .stop-name{font-weight:600}
+.map-stop-row .stop-days{font-size:0.75rem;color:var(--storm);margin-left:auto;white-space:nowrap}
+
+.map-big-btn{display:block;text-align:center;padding:1.5rem 2rem;background:linear-gradient(135deg,var(--pine),#1a3a2f);color:var(--white);text-decoration:none;font-weight:700;font-size:1.1rem;letter-spacing:0.5px;transition:all 0.3s}
+.map-big-btn:hover{background:linear-gradient(135deg,#1a3a2f,var(--pine));letter-spacing:1px}
+.map-big-btn span{font-size:0.8rem;display:block;opacity:0.6;font-weight:400;margin-top:4px}
+
+.map-stops-bar{display:flex;flex-wrap:wrap;gap:6px;padding:1rem 1.5rem;background:rgba(45,74,62,0.03);border-top:1px solid rgba(45,74,62,0.06);align-items:center}
+.map-stop-pill{font-size:0.72rem;font-weight:600;padding:4px 10px;border-radius:50px;background:var(--cream);color:var(--pine);white-space:nowrap}
+.map-stop-arrow{color:var(--sage);font-size:0.7rem}
+
+/* ITINERARY */
+.leg-header{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;padding:1.25rem 1.5rem;background:var(--pine);color:var(--white);border-radius:var(--radius);position:relative;overflow:hidden}
+.leg-header::after{content:'';position:absolute;right:-20px;top:-20px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.05)}
+.leg-number{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:1rem;flex-shrink:0}
+.leg-info{flex:1}.leg-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700}.leg-subtitle{font-size:0.8rem;opacity:0.7;font-weight:300}
+
+.day-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:1.25rem;box-shadow:0 2px 16px var(--shadow);border:1px solid rgba(45,74,62,0.06);transition:transform 0.2s,box-shadow 0.2s}
+.day-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(45,74,62,0.15)}
+.day-card-top{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+.day-number{background:var(--pine);color:var(--white);font-family:'JetBrains Mono',monospace;font-weight:600;font-size:0.75rem;padding:6px 12px;border-radius:8px;white-space:nowrap;flex-shrink:0}
+.day-date{font-size:0.78rem;color:var(--storm)}
+.day-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--pine);margin-bottom:2px}
+.day-route{font-size:0.85rem;color:var(--storm)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:0.72rem;font-weight:700;padding:5px 12px;border-radius:50px;text-transform:uppercase;letter-spacing:0.8px}
+.badge-drive{background:#EEF2FF;color:#4361EE}.badge-climb{background:#FFF0EB;color:var(--ember);border:1.5px solid var(--ember)}.badge-climb::before{content:'🧗'}.badge-hike{background:#ECFDF5;color:#059669}.badge-castle{background:#FFF7ED;color:#B45309}.badge-dino{background:#F0FDF4;color:#16A34A}.badge-harry{background:#FAF5FF;color:#7C3AED}.badge-nature{background:#F0F9FF;color:#0284C7}.badge-rain{background:#F1F5F9;color:#64748B}.badge-roman{background:#FEF2F2;color:#991B1B}
+.day-details{margin-top:0.75rem}.detail-group{margin-bottom:0.75rem}
+.detail-label{font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--moss);margin-bottom:4px}
+.detail-text{font-size:0.95rem;color:var(--slate);line-height:1.6}
+.detail-text a{color:var(--ember);text-decoration:none;font-weight:600;border-bottom:1px dashed var(--ember)}
+.detail-text a:hover{color:var(--pine);border-color:var(--pine)}
+
+/* Drive link box */
+.drive-link-box{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#EEF2FF,#F0F9FF);border-radius:var(--radius);padding:0.75rem 1rem;margin-top:0.75rem;border:1px solid rgba(67,97,238,0.15)}
+.drive-link-box .drive-icon{font-size:1.2rem;flex-shrink:0}
+.drive-link-box .drive-text{font-size:0.82rem;color:var(--slate);flex:1}
+.drive-link-box .drive-text strong{color:#4361EE}
+.drive-link-box a{display:inline-flex;align-items:center;gap:4px;background:#4361EE;color:var(--white);padding:5px 14px;border-radius:50px;font-size:0.75rem;font-weight:700;text-decoration:none;white-space:nowrap;border:none;transition:background 0.2s}
+.drive-link-box a:hover{background:var(--pine)}
+
+.camp-box{background:linear-gradient(135deg,#F0F9FF,#ECFDF5);border-radius:var(--radius);padding:1rem 1.25rem;margin-top:1rem;border-left:4px solid var(--moss)}
+.camp-box .camp-label{font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--pine);margin-bottom:2px}
+.camp-box .camp-name{font-size:0.95rem;color:var(--slate)}
+.camp-box .camp-name a{color:var(--ember);text-decoration:none;font-weight:600;border-bottom:1px dashed var(--ember)}
+.camp-box .camp-cost{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--moss);font-weight:600}
+.camp-box .camp-map-link{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:0.78rem;color:var(--sky);text-decoration:none;font-weight:600}
+.camp-box .camp-map-link:hover{color:var(--pine)}
+.camp-box-free{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border-left:4px solid var(--gold)}
+.camp-box-free .camp-label{color:var(--rock)}
+
+/* Fun facts (inline) */
+.fun-fact{background:linear-gradient(135deg,#FFF7ED,#FFFBEB);border:2px dashed var(--gold);border-radius:var(--radius);padding:1.25rem 1.5rem 1.25rem 3.5rem;margin:1rem 0;position:relative}
+.fun-fact-emoji{position:absolute;top:14px;left:14px;font-size:1.4rem;line-height:1}
+.fun-fact-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--ember);margin-bottom:4px}
+.fun-fact-text{font-size:0.92rem;color:var(--slate);line-height:1.6}
+
+/* FINANCIAL */
+.finance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin-bottom:2rem}
+.finance-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:0 2px 16px var(--shadow);border:1px solid rgba(45,74,62,0.06);text-align:center}
+.finance-icon{font-size:2rem;margin-bottom:0.75rem}
+.finance-label{font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--storm);margin-bottom:0.5rem}
+.finance-value{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:600;color:var(--pine)}
+.finance-detail{font-size:0.82rem;color:var(--storm);margin-top:0.5rem;line-height:1.5}
+.finance-total{background:linear-gradient(135deg,var(--pine),#1a3a2f);color:var(--white);border-radius:var(--radius-lg);padding:2rem;text-align:center;box-shadow:0 4px 24px rgba(45,74,62,0.25)}
+.finance-total .finance-label{color:var(--sage)}.finance-total .finance-value{color:var(--gold);font-size:2.8rem}.finance-total .finance-detail{color:rgba(255,255,255,0.6)}
+.calculator{background:var(--white);border-radius:var(--radius-lg);padding:2rem;box-shadow:0 2px 16px var(--shadow);margin-top:2rem}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(45,74,62,0.08)}
+.calc-row:last-child{border-bottom:none}
+.calc-label{font-size:0.92rem;color:var(--slate)}
+.calc-input{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:0.95rem;width:100px;text-align:right;border:2px solid var(--sage);border-radius:8px;padding:6px 10px;color:var(--pine);background:var(--cream);outline:none}
+.calc-input:focus{border-color:var(--ember)}
+.calc-total-row{background:var(--cream);margin:0 -2rem -2rem;padding:1.25rem 2rem;border-radius:0 0 var(--radius-lg) var(--radius-lg);display:flex;justify-content:space-between;align-items:center}
+.calc-total-label{font-weight:700;font-size:1.1rem;color:var(--pine)}
+.calc-total-value{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:1.4rem;color:var(--ember)}
+
+/* FUN FACTS GRID */
+.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.fact-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:0 2px 16px var(--shadow);border:1px solid rgba(45,74,62,0.06);transition:transform 0.2s}
+.fact-card:hover{transform:translateY(-3px)}
+.fact-emoji{font-size:2.5rem;margin-bottom:0.75rem}
+.fact-card-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--pine);margin-bottom:0.5rem}
+.fact-card-text{font-size:0.92rem;color:var(--slate);line-height:1.6}
+
+/* PACKING */
+.packing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.packing-card{background:var(--white);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:0 2px 16px var(--shadow)}
+.packing-card h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--pine);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.packing-item{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:0.88rem;color:var(--slate);cursor:pointer}
+.packing-item input[type="checkbox"]{accent-color:var(--moss);width:16px;height:16px}
+.packing-item.checked{text-decoration:line-through;opacity:0.5}
+
+/* QUICK LINKS */
+.links-section{max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem}
+
+/* FOOD & DRINK */
+.food-section{max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem}
+.food-area{margin-bottom:2.5rem}
+.food-area-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;color:var(--pine);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.food-card{background:var(--white);border-radius:var(--radius);padding:1.25rem;box-shadow:0 2px 12px var(--shadow);border:1px solid rgba(45,74,62,0.06);transition:transform 0.2s}
+.food-card:hover{transform:translateY(-2px)}
+.food-card-star{background:linear-gradient(135deg,#FFF7ED,#FFFBEB);border:1.5px solid var(--gold)}
+.food-card-pub{background:linear-gradient(135deg,#F0F9FF,#ECFDF5);border:1.5px solid var(--sage)}
+.food-badge{display:inline-flex;align-items:center;gap:4px;font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:0.5rem}
+.food-badge-star{background:var(--gold);color:var(--white)}
+.food-badge-bib{background:#E85D04;color:var(--white)}
+.food-badge-pub{background:var(--moss);color:var(--white)}
+.food-badge-rooms{background:var(--sky);color:var(--white)}
+.food-card h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--pine);margin-bottom:4px}
+.food-card .food-loc{font-size:0.78rem;color:var(--storm);margin-bottom:0.4rem}
+.food-card .food-desc{font-size:0.88rem;color:var(--slate);line-height:1.5}
+.food-card .food-price{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ember);font-weight:600;margin-top:0.4rem}
+.food-card a{color:var(--ember);text-decoration:none;font-weight:600;font-size:0.82rem;border-bottom:1px dashed var(--ember)}
+.food-card a:hover{color:var(--pine);border-color:var(--pine)}
+.food-tip{background:linear-gradient(135deg,#FFF7ED,#FFFBEB);border:2px dashed var(--gold);border-radius:var(--radius);padding:1rem 1.25rem;margin:1rem 0;font-size:0.88rem;color:var(--slate);line-height:1.5}
+.food-tip strong{color:var(--ember)}
+
+/* DAY FOOD TIP */
+.day-food-tip{display:flex;align-items:flex-start;gap:10px;background:linear-gradient(135deg,#FFFBEB,#FFF7ED);border-radius:var(--radius);padding:0.75rem 1rem;margin-top:0.75rem;border:1px solid rgba(212,168,67,0.2)}
+.day-food-tip .food-tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.day-food-tip .food-tip-text{font-size:0.82rem;color:var(--slate);line-height:1.5}
+.day-food-tip .food-tip-text strong{color:var(--ember)}
+.day-food-tip a{color:var(--ember);text-decoration:none;font-weight:600;border-bottom:1px dashed var(--ember);font-size:0.82rem}
+.day-food-tip a:hover{color:var(--pine)}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.links-card{background:var(--white);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:0 2px 16px var(--shadow)}
+.links-card h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--pine);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.link-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid rgba(45,74,62,0.05)}
+.link-row:last-child{border-bottom:none}
+.link-row a{font-size:0.85rem;color:var(--ember);text-decoration:none;font-weight:600}
+.link-row a:hover{color:var(--pine)}
+.link-row .link-desc{font-size:0.78rem;color:var(--storm);margin-left:auto;white-space:nowrap}
+
+/* FOOTER */
+.footer{background:var(--pine);color:rgba(255,255,255,0.6);text-align:center;padding:3rem 1.5rem;font-size:0.85rem}
+.footer strong{color:var(--gold);font-family:'Playfair Display',serif;font-size:1.1rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){.route-line{display:none}.route-timeline{gap:0.25rem}.route-stop{flex:1 1 55px;max-width:75px}.route-dot{width:34px;height:34px;font-size:0.95rem}.route-stop-name{font-size:0.62rem}.route-stop-days{font-size:0.55rem}.day-card{padding:1.25rem}.day-card-top{flex-direction:column;gap:0.5rem}.hero-stats{gap:1.25rem}.finance-grid{grid-template-columns:1fr}.leg-header{flex-direction:column;gap:0.5rem;text-align:center}.drive-link-box{flex-direction:column;text-align:center}}
+@media(max-width:480px){.hero h1{font-size:2rem}.route-stop{flex:0 0 auto;width:60px}.nav-link{font-size:0.75rem;padding:5px 10px}}
+@media print{.sticky-nav,.scroll-hint{display:none}.hero{min-height:auto;padding:2rem;break-after:page}.day-card{break-inside:avoid;box-shadow:none;border:1px solid #ccc}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-mountains"><div class="mountain mountain-1"></div><div class="mountain mountain-2"></div><div class="mountain mountain-3"></div><div class="mountain mountain-4"></div></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏕️ Family Adventure 2026</div>
+    <h1>Scotland, Skye<br>& The <span>Lakes</span></h1>
+    <p class="hero-subtitle">A 15-day campervan odyssey with dinosaur footprints, highland reindeer, Hogwarts trains, Roman forts, and sport climbing — for the whole family.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-value">15</div><div class="hero-stat-label">Days</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">~1,200</div><div class="hero-stat-label">Miles</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">3</div><div class="hero-stat-label">Climbing Days</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">2+2</div><div class="hero-stat-label">Adventurers</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Scroll to explore</div>
+</section>
+
+<!-- NAV -->
+<nav class="sticky-nav" id="nav">
+  <div class="nav-inner">
+    <button class="nav-link active" data-target="route" type="button">Route</button>
+    <button class="nav-link" data-target="mapview" type="button">Map</button>
+    <button class="nav-link" data-target="itinerary" type="button">Itinerary</button>
+    <button class="nav-link" data-target="finance" type="button">Budget</button>
+    <button class="nav-link" data-target="fooddrink" type="button">Food & Drink</button>
+    <button class="nav-link" data-target="funfacts" type="button">Fun Facts</button>
+    <button class="nav-link" data-target="packing" type="button">Pack List</button>
+    <button class="nav-link" data-target="quicklinks" type="button">All Links</button>
+  </div>
+</nav>
+
+<!-- ROUTE TIMELINE -->
+<section class="section-wrap" id="route">
+  <div class="section-header"><div class="section-label">The Journey</div><div class="section-title">Route Overview</div></div>
+  <div class="route-timeline">
+    <div class="route-line"></div>
+    <div class="route-stop"><div class="route-dot start">🏠</div><div class="route-stop-name">Basingstoke</div><div class="route-stop-days">Day 1 Start</div></div>
+    <div class="route-stop"><div class="route-dot family">🏛️</div><div class="route-stop-name">Hadrian's Wall</div><div class="route-stop-days">Day 1</div></div>
+    <div class="route-stop"><div class="route-dot family">👪</div><div class="route-stop-name">Newcastle</div><div class="route-stop-days">Day 1</div></div>
+    <div class="route-stop"><div class="route-dot family">🏰</div><div class="route-stop-name">Edinburgh</div><div class="route-stop-days">Day 2</div></div>
+    <div class="route-stop"><div class="route-dot highland">🦌</div><div class="route-stop-name">Aviemore</div><div class="route-stop-days">Days 3–4</div></div>
+    <div class="route-stop"><div class="route-dot highland">🐉</div><div class="route-stop-name">Loch Ness</div><div class="route-stop-days">Day 5</div></div>
+    <div class="route-stop"><div class="route-dot adventure">🧚</div><div class="route-stop-name">Skye</div><div class="route-stop-days">Days 6–7</div></div>
+    <div class="route-stop"><div class="route-dot adventure">🚂</div><div class="route-stop-name">Fort William</div><div class="route-stop-days">Days 8–9</div></div>
+    <div class="route-stop"><div class="route-dot adventure">⛰️</div><div class="route-stop-name">Glencoe</div><div class="route-stop-days">Day 10</div></div>
+    <div class="route-stop"><div class="route-dot lake">🧗</div><div class="route-stop-name">Keswick</div><div class="route-stop-days">Days 11–13</div></div>
+    <div class="route-stop"><div class="route-dot start">🏠</div><div class="route-stop-name">Basingstoke</div><div class="route-stop-days">Days 14–15</div></div>
+  </div>
+</section>
+
+<!-- VISUAL MAP -->
+<section class="map-section" id="mapview">
+  <div class="section-header"><div class="section-label">The Full Route</div><div class="section-title">Interactive Map</div></div>
+  <div class="map-card">
+    <div class="map-card-header">
+      <h3>📍 Complete Trip Route — 11 Key Stops</h3>
+      <p>Click below to see the full route with all waypoints on Google Maps</p>
+    </div>
+    <div class="map-visual">
+      <div class="map-route-visual">
+        <div class="map-leg"><div class="map-leg-line"></div><div class="map-leg-stops"><div class="map-leg-label">Leg 1 — The Drive North</div><div class="map-stop-row"><span class="stop-emoji">🏠</span><span class="stop-name">Basingstoke</span><span class="stop-days">Day 1</span></div><div class="map-stop-row"><span class="stop-emoji">🏛️</span><span class="stop-name">Hadrian's Wall (Housesteads)</span><span class="stop-days">Day 1</span></div><div class="map-stop-row"><span class="stop-emoji">👼</span><span class="stop-name">Angel of the North</span><span class="stop-days">Day 1</span></div><div class="map-stop-row"><span class="stop-emoji">👪</span><span class="stop-name">Newcastle</span><span class="stop-days">Day 1</span></div><div class="map-stop-row"><span class="stop-emoji">🏰</span><span class="stop-name">Bamburgh Castle</span><span class="stop-days">Day 2</span></div><div class="map-stop-row"><span class="stop-emoji">🏴</span><span class="stop-name">Edinburgh</span><span class="stop-days">Day 2</span></div></div></div>
+        <div class="map-leg"><div class="map-leg-line"></div><div class="map-leg-stops"><div class="map-leg-label">Leg 2 — The Highlands</div><div class="map-stop-row"><span class="stop-emoji">🦌</span><span class="stop-name">Aviemore (Cairngorms)</span><span class="stop-days">Days 3–4</span></div><div class="map-stop-row"><span class="stop-emoji">🐉</span><span class="stop-name">Loch Ness</span><span class="stop-days">Day 5</span></div><div class="map-stop-row"><span class="stop-emoji">🧚</span><span class="stop-name">Isle of Skye</span><span class="stop-days">Days 6–7</span></div></div></div>
+        <div class="map-leg"><div class="map-leg-line"></div><div class="map-leg-stops"><div class="map-leg-label">Leg 3 — West Coast & Harry Potter</div><div class="map-stop-row"><span class="stop-emoji">🚂</span><span class="stop-name">Fort William</span><span class="stop-days">Days 8–9</span></div><div class="map-stop-row"><span class="stop-emoji">⛰️</span><span class="stop-name">Glencoe</span><span class="stop-days">Day 10</span></div></div></div>
+        <div class="map-leg"><div class="map-leg-line"></div><div class="map-leg-stops"><div class="map-leg-label">Leg 4 — Lake District & Home</div><div class="map-stop-row"><span class="stop-emoji">🧗</span><span class="stop-name">Keswick (Lake District)</span><span class="stop-days">Days 11–13</span></div><div class="map-stop-row"><span class="stop-emoji">🏠</span><span class="stop-name">Basingstoke</span><span class="stop-days">Days 14–15</span></div></div></div>
+      </div>
+    </div>
+    <a class="map-big-btn" href="https://www.google.com/maps/dir/Basingstoke,+UK/Housesteads+Roman+Fort,+Hexham/Angel+of+the+North,+Gateshead/Newcastle+upon+Tyne,+UK/Bamburgh+Castle,+Northumberland/Edinburgh,+UK/Aviemore,+UK/Loch+Ness,+UK/Isle+of+Skye,+UK/Fort+William,+UK/Glencoe,+UK/Keswick,+UK/Basingstoke,+UK" target="_blank" rel="noopener">
+      🗺️ Open Full Route in Google Maps ↗
+      <span>See the complete 1,200-mile route with all stops and driving directions</span>
+    </a>
+    <div class="map-stops-bar">
+      <span class="map-stop-pill">Basingstoke</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Hadrian's Wall</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Newcastle</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Bamburgh</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Edinburgh</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Aviemore</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Loch Ness</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Skye</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Fort William</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Glencoe</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Keswick</span><span class="map-stop-arrow">→</span>
+      <span class="map-stop-pill">Basingstoke</span>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="section-wrap-narrow" id="itinerary">
+  <div class="section-header"><div class="section-label">Day by Day</div><div class="section-title">The Full Itinerary</div></div>
+
+  <!-- LEG 1 -->
+  <div class="leg-header"><div class="leg-number">1</div><div class="leg-info"><div class="leg-title">The Drive North</div><div class="leg-subtitle">Hadrian's Wall, family stops & castles</div></div></div>
+
+  <!-- Day 1 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 1</div><div><div class="day-date">Saturday 28 March</div><div class="day-title">Basingstoke → Newcastle</div><div class="day-route">~290 miles · ~5.5–6 hrs (with stops)</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Long drive</span><span class="badge badge-roman">🏛️ Roman history</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Plan</div><div class="detail-text">Early start (6am). Head north on the M1/A1(M). Break at services around Leicester (~2 hrs in).</div></div>
+      <div class="detail-group"><div class="detail-label">Stop 1 — Hadrian's Wall ⭐</div><div class="detail-text"><strong>Housesteads Roman Fort</strong> — the best-preserved and most dramatic section of Hadrian's Wall. See the Wall snaking over wild crags, visible barracks, granaries, and Roman communal toilets (kids love this!). 10-min uphill walk from car park. ~£10/adult, under-5s free. Allow 1–1.5 hrs.<br><br><a href="https://www.english-heritage.org.uk/visit/places/housesteads-roman-fort-hadrians-wall/" target="_blank">🔗 Housesteads (English Heritage)</a> · <a href="https://www.google.com/maps/place/Housesteads+Roman+Fort+-+Hadrian's+Wall/" target="_blank">📍 Map</a><br><br>Nearby: <strong>Steel Rigg</strong> — short walk along the Wall with dramatic views (free).</div></div>
+      <div class="detail-group"><div class="detail-label">Stop 2 — Angel of the North</div><div class="detail-text">5-min detour off the A1. Free parking, big open fields — kids can run around! The sculpture is 20m tall — taller than 4 giraffes! Perfect leg-stretch after the drive. <a href="https://www.google.com/maps/place/Angel+of+the+North/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">Give each kid a "spotter sheet" — who can count the most sheep on the Wall walk? Housesteads has an audio guide with stories about Roman soldiers' daily life. The communal toilet ruins are always a hit ("No doors?! And they shared a SPONGE?!"). Let them collect a stick as a pretend Roman sword for the walk.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 1 drive:</strong> Basingstoke → Housesteads → Angel of the North → Newcastle</span><a href="https://www.google.com/maps/dir/Basingstoke,+UK/Housesteads+Roman+Fort,+Hexham/Angel+of+the+North,+Gateshead/Newcastle+upon+Tyne,+UK" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box camp-box-free"><div class="camp-label">🛏️ Accommodation</div><div class="camp-name">Stay with Family in Newcastle</div></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🏛️</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">Hadrian's Wall is nearly 2,000 years old! It stretches 73 miles — like driving from home to London and back! The soldiers who guarded it came from all over the world. Their toilets had no doors — everyone sat in a row and shared a sponge on a stick instead of loo paper! 🤢</div></div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 2</div><div><div class="day-date">Sunday 29 March</div><div class="day-title">Newcastle → Edinburgh</div><div class="day-route">~130 miles · ~3 hrs (via coast road)</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Medium drive</span><span class="badge badge-castle">🏰 Castle</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Must-Do</div><div class="detail-text"><strong>Bamburgh Castle</strong> — one of the most dramatic castles in England, right on the beach. Kids can explore the enormous sandy beach below. If tide times work, consider <strong>Holy Island (Lindisfarne)</strong> — check <a href="https://holyislandcrossingtimes.northumberland.gov.uk/" target="_blank">crossing times</a> carefully. <a href="https://www.bamburghcastle.com/" target="_blank">🔗 Bamburgh Castle</a> · <a href="https://www.google.com/maps/place/Bamburgh+Castle/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">Bamburgh beach is HUGE — perfect for sandcastles, running races, and kite-flying. The castle has a dragon quest trail for kids! Challenge them to find all the hidden dragons. If the tide's right, the rock pools near the castle are full of crabs and starfish. Bring a bucket and magnifying glass!</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 2 drive:</strong> Newcastle → Bamburgh Castle → Edinburgh</span><a href="https://www.google.com/maps/dir/Newcastle+upon+Tyne,+UK/Bamburgh+Castle,+Northumberland/Edinburgh,+UK" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box camp-box-free"><div class="camp-label">🛏️ Accommodation</div><div class="camp-name">Stay with Friends in Edinburgh</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Foodie tip:</strong> Edinburgh has 7 Michelin-starred restaurants! If you can get a babysitter: <a href="https://www.heronrestaurant.com/" target="_blank">Heron</a> (1★, Leith, relaxed modern Scottish) or <a href="https://www.lylarestaurant.com/" target="_blank">Lyla</a> (1★, seafood tasting menu). For family-friendly: <strong>The Dogs</strong> on Hanover St does great casual Scottish food at honest prices.</span></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🏰</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">Bamburgh Castle is over 1,400 years old! Vikings attacked it with catapults but couldn't get in. It has a ghost called the "Pink Lady" — a princess tricked by a witch! It was one of the first castles ever attacked by cannons, in 1464.</div></div>
+  </div>
+
+  <!-- LEG 2 -->
+  <div class="leg-header"><div class="leg-number">2</div><div class="leg-info"><div class="leg-title">The Highlands Loop</div><div class="leg-subtitle">Reindeer, Nessie & dinosaur footprints</div></div></div>
+
+  <!-- Days 3-4 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAYS 3–4</div><div><div class="day-date">Mon 30 – Tue 31 March</div><div class="day-title">Edinburgh → Aviemore (Cairngorms)</div><div class="day-route">~155 miles · ~3 hrs driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Medium drive</span><span class="badge badge-climb">Sport Climbing</span><span class="badge badge-nature">🦌 Wildlife</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Day 3 — Drive & Settle In</div><div class="detail-text">Drive via A9 into Cairngorms. Set up at Glenmore. Afternoon walk at <strong>Loch Morlich Beach</strong> — freshwater sandy beach backed by mountains. Look for red squirrels in the Caledonian pine forest.</div></div>
+      <div class="detail-group"><div class="detail-label">Day 4 — Adventure Day</div><div class="detail-text"><strong>Morning:</strong> <a href="https://www.cairngormreindeer.co.uk/" target="_blank">Cairngorm Reindeer Herd</a> — guided hill walk to feed free-ranging reindeer. Book ahead! (~£17/adult, £9/child). <a href="https://www.google.com/maps/place/Cairngorm+Reindeer+Centre/" target="_blank">📍 Map</a><br><br><strong>Afternoon:</strong> <a href="https://www.landmarkpark.co.uk/" target="_blank">Landmark Forest Adventure Park</a> — treetop trail, water slides, dinosaur kingdom. (~£21/person). <a href="https://www.google.com/maps/place/Landmark+Forest+Adventure+Park/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 More Ideas for 5-Year-Olds</div><div class="detail-text">🚂 <strong>Strathspey Steam Railway</strong> — ride a real steam train from Aviemore to Broomhill (~90 min return). Snack trolley! <a href="https://www.strathspeyrailway.co.uk/" target="_blank">🔗 Book</a><br>🏔️ <strong>Cairngorm Mountain Funicular</strong> — Scotland's only mountain railway to 1,097m! Interactive sandboxes + mountain tubing slides (age 4+) at the bottom. <a href="https://www.cairngormmountain.co.uk/" target="_blank">🔗 Book</a><br>🐻 <strong>Highland Wildlife Park</strong> (~20 min drive) — polar bears, tigers, red pandas, wolves! Self-drive safari section. <a href="https://www.highlandwildlifepark.org.uk/" target="_blank">🔗 Book</a><br>🌲 <strong>Loch an Eilein</strong> — easy pushchair-friendly loop walk with a fairytale island castle in the middle of the loch. Red squirrels everywhere!<br>💚 <strong>The Green Loch</strong> — short walk to a magical emerald-green loch (kids will say it's full of goblins!)</div></div>
+      <div class="detail-group"><div class="detail-label">🧗 Sport Climbing — Moy Rock</div><div class="detail-text"><strong>Moy Rock</strong> (~40 min drive) — Highland sport crag, schist rock, F4–F7b. Well-bolted, sheltered. <a href="https://www.ukclimbing.com/logbook/crags/moy_rock-412" target="_blank">🔗 UKC Moy Rock</a> · <a href="https://www.google.com/maps/place/Moy+Rock/@57.4536,-4.1839,14z" target="_blank">📍 Map</a></div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 3 drive:</strong> Edinburgh → Aviemore (Glenmore Campsite)</span><a href="https://www.google.com/maps/dir/Edinburgh,+UK/Glenmore+Campsite,+Aviemore" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 2 Nights</div><div class="camp-name"><a href="https://www.campingandcaravanningclub.co.uk/campsites/uk/highland/aviemore/glenmore/" target="_blank">Glenmore Campsite</a>, Cairngorms</div><div class="camp-cost">~£38/night · 2 nights = ~£76</div><a class="camp-map-link" href="https://www.google.com/maps/place/Glenmore+Camping+and+Caravanning+Club+Site/" target="_blank">📍 View on map</a></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Foodie detour:</strong> On the A9 drive, <a href="https://www.killiecrankie.house/" target="_blank">Killiecrankie House</a> (1★, NEW for 2026!) near Pitlochry fuses Scottish produce with Japanese techniques — tasting menu ~£75. In Aviemore itself, <strong>The Cairn</strong> does excellent burgers and local ales, great with kids.</span></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🦌</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">Reindeer knees make a CLICK-CLICK sound when they walk! It helps them find each other in blizzards. These are the only free-ranging reindeer in Britain. Both boy AND girl reindeer grow antlers — they're the only deer where girls get them too!</div></div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 5</div><div><div class="day-date">Wednesday 1 April</div><div class="day-title">Aviemore → Loch Ness</div><div class="day-route">~35 miles · ~50 min driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Short drive</span><span class="badge badge-nature">🐉 Nessie</span><span class="badge badge-castle">🏰 Castle</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Must-Do</div><div class="detail-text"><strong>Dores Beach</strong> — pebbly shore on the quieter south side. Bring binoculars for Nessie! <a href="https://www.google.com/maps/place/Dores+Beach/" target="_blank">📍 Map</a><br><br><strong>Urquhart Castle</strong> — dramatic lochside ruins. Kids love the trebuchet and tower. (~£12/adult, free under-5s). <a href="https://www.historicenvironment.scot/visit-a-place/places/urquhart-castle/" target="_blank">🔗 Urquhart Castle</a> · <a href="https://www.google.com/maps/place/Urquhart+Castle/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">🐉 Give the kids binoculars and a "Nessie Spotter" mission — every ripple is exciting! Dores Beach is great for flat-stone skimming. At Urquhart Castle, kids can peer down into the dark dungeon and climb Grant Tower. The exhibition area has interactive films telling the monster story — 5-year-olds love it. <strong>Falls of Foyers</strong> (~20 min south) is a short woodland walk to a thundering waterfall.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 5 drive:</strong> Glenmore → Dores Beach → Urquhart Castle → Loch Ness Shores</span><a href="https://www.google.com/maps/dir/Glenmore+Campsite,+Aviemore/Dores+Beach/Urquhart+Castle/Loch+Ness+Shores+Camping" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 1 Night</div><div class="camp-name"><a href="https://www.lochnessshores.com/" target="_blank">Loch Ness Shores Camping</a></div><div class="camp-cost">~£40/night</div><a class="camp-map-link" href="https://www.google.com/maps/place/Loch+Ness+Shores+Camping+and+Caravanning/" target="_blank">📍 View on map</a></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🐉</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">Loch Ness holds more water than all lakes in England and Wales combined! It's 230m deep — the Statue of Liberty would be underwater. The water is dark brown from peat so you can only see 1 metre in. The first monster report was 1,500 years ago!</div></div>
+  </div>
+
+  <!-- Days 6-7 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAYS 6–7</div><div><div class="day-date">Thu 2 – Fri 3 April</div><div class="day-title">Loch Ness → Isle of Skye</div><div class="day-route">~115 miles · ~2.5 hrs (via Skye Bridge)</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Medium drive</span><span class="badge badge-dino">🦕 Dinosaurs</span><span class="badge badge-hike">🥾 Walk</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Day 6 — Fairy Glen</div><div class="detail-text">Drive the A87 through Glen Shiel. Cross the Skye Bridge (free!). <strong>Fairy Glen</strong> near Uig — surreal miniature hills like a hobbit village. Totally magical. <a href="https://www.google.com/maps/place/Fairy+Glen/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">Day 7 — Dinosaurs & Storr</div><div class="detail-text"><strong>Morning:</strong> <strong>Staffin Beach (An Corran)</strong> — real dinosaur footprints! Best at low tide. <a href="https://www.google.com/maps/place/An+Corran+Beach/" target="_blank">📍 Map</a><br><br><strong>Afternoon:</strong> <strong>Old Man of Storr</strong> — even 10 min up gives amazing views. Full walk ~4km. <a href="https://www.walkhighlands.co.uk/skye/oldmanofstorr.shtml" target="_blank">🔗 Walk Guide</a> · <a href="https://www.google.com/maps/place/Old+Man+of+Storr/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">🧚 At Fairy Glen, kids can build their own tiny "fairy houses" from stones and sticks — it's already full of them! Tell them fairies come alive at night.<br>🦕 At Staffin Beach, use a tide chart and head out at low tide. The footprints are IN the rock — bring playdough so they can compare their hand print to a dino's footprint. Some prints are bathtub-sized!<br>🦀 <strong>Rock pooling</strong> is brilliant at many Skye beaches — bring nets and buckets.<br>🦭 Watch for <strong>seals</strong> basking on rocks near Portree harbour — they often pop up close!<br>🍕 <strong>Gasta Pizza</strong> in Broadford — artisan pizza with Skye flair, very kid-friendly.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 6 drive:</strong> Loch Ness → Skye Bridge → Fairy Glen → Glenbrittle</span><a href="https://www.google.com/maps/dir/Loch+Ness+Shores+Camping/Fairy+Glen,+Isle+of+Skye/Glenbrittle+Campsite,+Isle+of+Skye" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 7 loop:</strong> Glenbrittle → Staffin Beach → Old Man of Storr → Glenbrittle</span><a href="https://www.google.com/maps/dir/Glenbrittle+Campsite,+Isle+of+Skye/An+Corran+Beach,+Staffin/Old+Man+of+Storr/Glenbrittle+Campsite,+Isle+of+Skye" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 2 Nights</div><div class="camp-name"><a href="https://www.campsite-skye.com/" target="_blank">Glenbrittle Campsite</a>, Isle of Skye</div><div class="camp-cost">~£35/night · 2 nights = ~£70</div><a class="camp-map-link" href="https://www.google.com/maps/place/Glenbrittle+Campsite/" target="_blank">📍 View on map</a></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🦕</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">These footprints are 170 MILLION years old! Scotland was once a tropical swamp. Scientists found prints from plant-eaters AND meat-eaters on the same beach. Some are as big as a car tyre!</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Skye foodie heaven:</strong> <a href="https://www.lochbay-restaurant.co.uk/" target="_blank">Loch Bay</a> (1★ Michelin, Stein — seafood, book weeks ahead!). <a href="https://www.edinbanelodge.com/" target="_blank">Edinbane Lodge</a> (4 AA Rosettes, best tasting menu on Skye). <a href="https://edinbaneinn.co.uk/" target="_blank">Edinbane Inn</a> — great gastropub <strong>with 7 rooms</strong>, superb Cullen Skink. <strong>Stein Inn</strong> — Skye's oldest pub, amazing sunsets and langoustines. <a href="https://threechimneys.co.uk/" target="_blank">Three Chimneys</a> — world-famous, 5★ restaurant with rooms.</span></div>
+  </div>
+
+  <!-- LEG 3 -->
+  <div class="leg-header"><div class="leg-number">3</div><div class="leg-info"><div class="leg-title">The West Coast & Harry Potter</div><div class="leg-subtitle">Hogwarts Express, white beaches & climbing</div></div></div>
+
+  <!-- Days 8-9 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAYS 8–9</div><div><div class="day-date">Sat 4 – Sun 5 April</div><div class="day-title">Skye → Fort William</div><div class="day-route">~100 miles · ~2.5 hrs driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Medium drive</span><span class="badge badge-harry">⚡ Harry Potter</span><span class="badge badge-climb">Climbing Option</span><span class="badge badge-nature">🏖️ Beach</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Day 8 — Harry Potter Day!</div><div class="detail-text"><strong>Camusdarach Beach</strong> — white sand, turquoise water. <a href="https://www.google.com/maps/place/Camusdarach+Beach/" target="_blank">📍 Map</a><br><br><strong>Glenfinnan Viaduct</strong> — the Hogwarts Express bridge! Jacobite Steam Train crosses at ~<strong>10:45am</strong> and ~<strong>3:00pm</strong>. <a href="https://www.westcoastrailways.co.uk/jacobite/steam-train-trip" target="_blank">🔗 Jacobite Train</a> · <a href="https://www.google.com/maps/place/Glenfinnan+Viaduct+Viewpoint/" target="_blank">📍 Viewpoint</a></div></div>
+      <div class="detail-group"><div class="detail-label">Day 9 — Climbing or Glen Nevis</div><div class="detail-text"><strong>If dry:</strong> Bouldering in <strong>Glen Nevis</strong> — riverside boulders. <a href="https://www.google.com/maps/place/Glen+Nevis/" target="_blank">📍 Map</a><br><br><strong>If wet:</strong> <a href="https://www.threewisemonkeysclimbing.com/" target="_blank">Three Wise Monkeys</a> — indoor wall, kids bouldering. (~£10/adult, £7/child). <a href="https://www.google.com/maps/place/Three+Wise+Monkeys+Climbing/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">🚂 <strong>Ride the Jacobite!</strong> If budget allows (~£40/adult return), ride the actual Hogwarts Express steam train from Fort William to Mallaig. Crosses the viaduct! Book months ahead. Otherwise, watch from below — train crosses ~10:45am and ~3pm.<br>🏖️ <strong>Camusdarach Beach</strong> — white Caribbean-style sand, shallow turquoise water. Safe for paddling, amazing for building sandcastles!<br>🦦 Walk along the <strong>Caledonian Canal</strong> from Fort William to Neptune's Staircase (UK's longest staircase lock) — watch boats go up and down!<br>🧗 <strong>Three Wise Monkeys</strong> has a dedicated kids' bouldering area — safe, colourful, and fun for 5-year-olds to scramble on.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 8 drive:</strong> Glenbrittle → Camusdarach Beach → Glenfinnan Viaduct → Glen Nevis</span><a href="https://www.google.com/maps/dir/Glenbrittle+Campsite,+Isle+of+Skye/Camusdarach+Beach/Glenfinnan+Viaduct+Viewpoint/Glen+Nevis+Caravan+and+Camping+Park" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 2 Nights</div><div class="camp-name"><a href="https://www.glen-nevis.co.uk/" target="_blank">Glen Nevis Caravan & Camping Park</a></div><div class="camp-cost">~£38/night · 2 nights = ~£76</div><a class="camp-map-link" href="https://www.google.com/maps/place/Glen+Nevis+Caravan+and+Camping+Park/" target="_blank">📍 View on map</a></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🚂</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">The Glenfinnan Viaduct has 21 arches and is 30m high — that's 6 houses stacked up! It was one of the first big concrete structures ever. You can ride the real steam train — it burns coal and puffs real steam!</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Eat here:</strong> <strong>Crannog Seafood Restaurant</strong> on Fort William's waterfront — fresh langoustines and mussels, family-friendly. <strong>The Grog & Gruel</strong> — real ale pub with hearty meals. For a splurge, <a href="https://www.inverlochycastlehotel.com/" target="_blank">Inverlochy Castle</a> has a celebrated restaurant nearby.</span></div>
+  </div>
+
+  <!-- Day 10 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 10</div><div><div class="day-date">Monday 6 April</div><div class="day-title">Fort William → Glencoe</div><div class="day-route">~16 miles · ~25 min driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Short drive</span><span class="badge badge-hike">🥾 Easy walk</span><span class="badge badge-harry">⚡ Hagrid vibes</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Plan</div><div class="detail-text"><strong>Glencoe Lochan</strong> — flat, easy walk around a loch with towering peaks. Serious Hagrid's Hut vibes. ~1 mile, pushchair-friendly. <a href="https://www.walkhighlands.co.uk/fortwilliam/glencoe-lochan.shtml" target="_blank">🔗 Walk Guide</a> · <a href="https://www.google.com/maps/place/Glencoe+Lochan/" target="_blank">📍 Map</a><br><br><strong>Three Sisters viewpoint</strong> on the A82 — jaw-dropping from the car park. <a href="https://www.google.com/maps/place/Three+Sisters+Viewpoint,+Glencoe/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 For 5-Year-Olds</div><div class="detail-text">🌊 <strong>Action Glen</strong> at Isles of Glencoe Hotel — outdoor adventure centre with sea kayaking, archery, and paddle boarding suitable for families. <a href="https://www.crerarhotels.com/collection/glencoe-inn/" target="_blank">🔗 Info</a><br>🪵 The Glencoe Lochan walk is magical — play "spot the reflection" in the still water, collect pine cones, and look for red squirrels. Tell the kids this is where Hagrid lives!<br>🦌 Keep eyes peeled for red deer on the drive through the glen — they're often right by the road.<br>🏊 If the weather's grim, <strong>Ice Factor</strong> in Kinlochleven (15 min) has an indoor ice climbing wall and a huge indoor climbing centre — perfect for adventurous 5-year-olds.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 10 drive:</strong> Glen Nevis → Glencoe Lochan → Invercoe Campsite</span><a href="https://www.google.com/maps/dir/Glen+Nevis+Caravan+and+Camping+Park/Glencoe+Lochan/Invercoe+Caravan+and+Camping+Park" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 1 Night</div><div class="camp-name"><a href="https://www.glencoecamp.com/" target="_blank">Invercoe Caravan & Camping Park</a>, Glencoe</div><div class="camp-cost">~£40/night</div><a class="camp-map-link" href="https://www.google.com/maps/place/Invercoe+Caravan+and+Camping+Park/" target="_blank">📍 View on map</a></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">⛰️</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">These mountains were once taller than Everest! 400 million years of rain and ice wore them down. Ben Nevis gets snow about 100 days a year — there's a ruined observatory at the very top where scientists lived in the 1880s!</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Legendary pub:</strong> <a href="https://clachaig.com/" target="_blank">Clachaig Inn</a> — THE Glencoe pub. 365+ whiskies, 100+ gins, real ales, hearty food, log fires, live music, and <strong>23 rooms</strong> if you fancy a night off the van! Also: <strong>Kings House Hotel</strong> — recently refurbished, stunning location, bunkhouse + hotel rooms.</span></div>
+  </div>
+
+  <!-- LEG 4 -->
+  <div class="leg-header"><div class="leg-number">4</div><div class="leg-info"><div class="leg-title">The Lake District & Return</div><div class="leg-subtitle">Sport climbing, Catbells & the journey home</div></div></div>
+
+  <!-- Days 11-13 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAYS 11–13</div><div><div class="day-date">Tue 7 – Thu 9 April</div><div class="day-title">Glencoe → Lake District (Keswick)</div><div class="day-route">~185 miles · ~4 hrs driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Long drive</span><span class="badge badge-climb">Sport Climbing</span><span class="badge badge-hike">🥾 Catbells</span><span class="badge badge-rain">☔ Rainy day plan</span></div>
+    <div class="day-details">
+      <div class="detail-group"><div class="detail-label">Day 11 — The Big Drive South</div><div class="detail-text">A82 through Rannoch Moor, then M74/M6. <strong>Lunch at Tebay Services</strong> (Westmorland) — proper farm shop café with ducks. <a href="https://www.google.com/maps/place/Tebay+Services/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">Day 12 — Climbing & Catbells</div><div class="detail-text"><strong>Morning (split the team!):</strong> <strong>Bram Crag Quarry</strong> or <strong>Castle Inn Crag</strong> — sport climbing on slate, F4–F7a+. <a href="https://www.ukclimbing.com/logbook/crags/bram_crag_quarry-2901" target="_blank">🔗 UKC Bram Crag</a> · <a href="https://www.google.com/maps/place/Bram+Crag+Quarry/" target="_blank">📍 Map</a><br><br><strong>Afternoon:</strong> Hike <strong>Catbells</strong> — classic kid-friendly fell, 451m, ~2 hrs return. <a href="https://www.walkhighlands.co.uk/lakedistrict/catbells.shtml" target="_blank">🔗 Guide</a> · <a href="https://www.google.com/maps/place/Catbells/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">Day 13 — Keswick Day</div><div class="detail-text"><strong>Sunny:</strong> More climbing or rowing on Derwentwater. <strong>Rainy:</strong> <a href="https://www.puzzlingplace.co.uk/" target="_blank">The Puzzling Place</a> — optical illusions museum. <a href="https://www.google.com/maps/place/The+Puzzling+Place/" target="_blank">📍 Map</a></div></div>
+      <div class="detail-group"><div class="detail-label">🧒 Fun Things for 5-Year-Olds in Keswick</div><div class="detail-text">🚣 <strong>Boat hire on Derwentwater</strong> — hire a rowing boat or take the Keswick Launch around the lake. Kids love being "captain"!<br>✏️ <strong>Derwent Pencil Museum</strong> — the home of the first pencil ever made! Enter through a replica mine, see WW2 spy pencils with hidden maps, and the world's longest pencil (8m!). Art workshop area too.<br>🧩 <strong>The Puzzling Place</strong> — anti-gravity room, holograms, optical illusions. Kids come out with hilarious photos. Book ahead in holidays!<br>🧗 <strong>Kong Adventure</strong> — indoor climbing walls, 70m artificial cave system, and "Krazy Kong" colourful climbing walls shaped like spaceships and castles. Hard play area for littles too (age 3+). <a href="https://www.kongadventure.co.uk/" target="_blank">🔗 Book</a><br>🌲 <strong>Whinlatter Forest</strong> — Stick Man / Gruffalo trail through the trees (5 min drive from campsite). Visitor centre, adventure playground, red squirrels!<br>🦙 <strong>Alpacaly Ever After</strong> — walk with alpacas on the shores of Derwentwater. Totally adorable. <a href="https://www.alpacalyeverafter.co.uk/" target="_blank">🔗 Book</a><br>🦡 <strong>Lake District Wildlife Park</strong> (~15 min) — red pandas, lemurs, otters, birds of prey. Keeper talks throughout the day.<br>🎭 <strong>Theatre by the Lake</strong> — gorgeous lakeside theatre with family shows.</div></div>
+    </div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 11 drive:</strong> Invercoe → Tebay Services → Castlerigg Hall, Keswick</span><a href="https://www.google.com/maps/dir/Invercoe+Caravan+and+Camping+Park/Tebay+Services/Castlerigg+Hall+Caravan+and+Camping+Park" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 3 Nights</div><div class="camp-name"><a href="https://www.castlerigghall.co.uk/" target="_blank">Castlerigg Hall Caravan & Camping Park</a></div><div class="camp-cost">~£42/night · 3 nights = ~£126</div><a class="camp-map-link" href="https://www.google.com/maps/place/Castlerigg+Hall+Caravan+and+Camping+Park/" target="_blank">📍 View on map</a></div>
+    <div class="fun-fact"><span class="fun-fact-emoji">🐿️</span><div class="fun-fact-title">Fun Fact for 5-Year-Olds!</div><div class="fun-fact-text">This is one of the last places in England with red squirrels! They hide 10,000 nuts every autumn but forget where HALF are. Those lost nuts grow into trees — squirrels accidentally plant forests! Beatrix Potter lived here and helped save the countryside.</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍽️</span><span class="food-tip-text"><strong>Michelin mile:</strong> Cumbria has more Michelin stars than anywhere outside London! Near Keswick: <a href="https://www.thecottageinthewood.co.uk/" target="_blank">Cottage in the Wood</a> (1★, Whinlatter Forest — tasting menu in the trees, <strong>8 rooms</strong> to stay!). In Keswick: <strong>The Royal Oak</strong> — great gastropub with 14 rooms. <strong>Fell Bar</strong> at Lodore Falls for craft ales. For the ultimate: <a href="https://www.lenclume.co.uk/" target="_blank">L'Enclume</a> in Cartmel is a 3★ Michelin — the UK's best restaurant (45 min drive south).</span></div>
+  </div>
+
+  <!-- Day 14 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 14</div><div><div class="day-date">Friday 10 April</div><div class="day-title">Lake District → Midlands Stopover</div><div class="day-route">~180 miles · ~3.5 hrs driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Long drive</span></div>
+    <div class="day-details"><div class="detail-group"><div class="detail-label">Plan</div><div class="detail-text">M6/M1 south to Warwickshire area. Find a campsite or Britstop. Or push home (~5.5 hrs non-stop from Keswick).</div></div></div>
+    <div class="drive-link-box"><span class="drive-icon">🗺️</span><span class="drive-text"><strong>Day 14–15 drive:</strong> Castlerigg Hall → Basingstoke (direct)</span><a href="https://www.google.com/maps/dir/Castlerigg+Hall+Caravan+and+Camping+Park/Basingstoke,+UK" target="_blank" rel="noopener">Open route ↗</a></div>
+    <div class="camp-box"><div class="camp-label">⛺ Campsite — 1 Night (Optional)</div><div class="camp-name">Midlands stopover (flexible — book day-of or Britstops)</div><div class="camp-cost">~£35/night</div></div>
+    <div class="day-food-tip"><span class="food-tip-icon">🍺</span><span class="food-tip-text"><strong>Pub with rooms idea:</strong> Skip the campsite and stay at a cosy pub! <strong>The King's Head</strong> (Ravenstonedale, M6 J38 — great food, rooms from ~£100). <strong>The Fat Lamb</strong> (Orton — proper country inn, rooms + good grub). Or use <a href="https://www.britstops.com/" target="_blank">Britstops</a> — a network of pubs that let you park your campervan overnight for free when you eat there!</span></div>
+  </div>
+
+  <!-- Day 15 -->
+  <div class="day-card">
+    <div class="day-card-top"><div class="day-number">DAY 15</div><div><div class="day-date">Saturday 11 April</div><div class="day-title">Home to Basingstoke! 🏠</div><div class="day-route">~100 miles · ~2 hrs driving</div></div></div>
+    <div class="badges"><span class="badge badge-drive">🚐 Short drive</span></div>
+    <div class="day-details"><div class="detail-group"><div class="detail-label">Plan</div><div class="detail-text">Easy final leg on M40/M3. Celebratory brunch en route. Home by lunchtime! 🎉</div></div></div>
+  </div>
+</section>
+
+<!-- FINANCIAL -->
+<section class="section-wrap-narrow" id="finance">
+  <div class="section-header"><div class="section-label">The Numbers</div><div class="section-title">Trip Budget</div></div>
+  <div class="finance-grid">
+    <div class="finance-card"><div class="finance-icon">⛽</div><div class="finance-label">Fuel</div><div class="finance-value" id="fuelTotal">£330</div><div class="finance-detail">~1,200 miles ÷ 25 MPG<br>≈ 218 litres × £1.52/L</div></div>
+    <div class="finance-card"><div class="finance-icon">⛺</div><div class="finance-label">Campsites</div><div class="finance-value">£387</div><div class="finance-detail">10 paid nights<br>+ 2 with family/friends<br>Avg ~£39/night</div></div>
+    <div class="finance-card"><div class="finance-icon">🍽️</div><div class="finance-label">Food & Drink</div><div class="finance-value">£1,500</div><div class="finance-detail">15 days × £100/day<br>Cooking + meals out</div></div>
+    <div class="finance-card"><div class="finance-icon">🎟️</div><div class="finance-label">Activities</div><div class="finance-value">£250</div><div class="finance-detail">Housesteads, reindeer,<br>Landmark, castles, climbing</div></div>
+  </div>
+  <div class="finance-total"><div class="finance-label">Estimated Total</div><div class="finance-value">~£2,467</div><div class="finance-detail">Excludes campervan hire/insurance · Adjust below ↓</div></div>
+  <div class="calculator">
+    <h3 style="font-family:'Playfair Display',serif;color:var(--pine);margin-bottom:1rem">⚙️ Adjust Your Budget</h3>
+    <div class="calc-row"><span class="calc-label">Total Miles</span><input class="calc-input" type="number" id="calcMiles" value="1200" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">MPG</span><input class="calc-input" type="number" id="calcMpg" value="25" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Diesel £/litre</span><input class="calc-input" type="number" id="calcDiesel" value="1.52" step="0.01" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Campsite £/night</span><input class="calc-input" type="number" id="calcCamp" value="39" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Paid nights</span><input class="calc-input" type="number" id="calcNights" value="10" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Food £/day</span><input class="calc-input" type="number" id="calcFood" value="100" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Trip days</span><input class="calc-input" type="number" id="calcDays" value="15" oninput="recalculate()"></div>
+    <div class="calc-row"><span class="calc-label">Activities</span><input class="calc-input" type="number" id="calcActivities" value="250" oninput="recalculate()"></div>
+    <div class="calc-total-row"><span class="calc-total-label">ESTIMATED TOTAL</span><span class="calc-total-value" id="calcTotal">£2,467</span></div>
+  </div>
+</section>
+
+<!-- FOOD & DRINK -->
+<section class="food-section" id="fooddrink">
+  <div class="section-header"><div class="section-label">Eat & Drink</div><div class="section-title">Michelin Stars, Gastropubs & Pubs with Rooms</div></div>
+
+  <div class="food-tip"><strong>💡 Campervan tip — Britstops:</strong> <a href="https://www.britstops.com/" target="_blank" style="color:var(--ember);font-weight:700;border-bottom:1px dashed var(--ember);text-decoration:none">Britstops</a> is a brilliant network of pubs, farms, and vineyards that let you park your campervan overnight for FREE when you eat or drink there. It's like the French "France Passion" scheme. Annual membership ~£30. Many are proper gastropubs. Perfect for your Day 14 stopover!</div>
+
+  <div class="food-area">
+    <div class="food-area-title">⭐ Michelin-Starred Restaurants on Your Route</div>
+    <div class="food-grid">
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐ 1 Michelin Star</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>Loch Bay</h4>
+        <div class="food-loc">📍 Stein, Isle of Skye (Days 6–7)</div>
+        <div class="food-desc">Chef Michael Smith's 18-cover seafood restaurant. Classic French techniques with the freshest Skye shellfish. The "Fruits de Mer" menu is legendary. Book weeks ahead!</div>
+        <div class="food-price">Tasting menu ~£120pp</div>
+        <a href="https://www.lochbay-restaurant.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐ 1 Michelin Star · NEW 2026</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>Killiecrankie House</h4>
+        <div class="food-loc">📍 Near Pitlochry, A9 (Day 3 detour)</div>
+        <div class="food-desc">Brand new star for 2026! Scottish-Japanese fusion in a restored Highland manse. House-made oat tofu, fermented cream sauces, garden produce. Rooms available.</div>
+        <div class="food-price">Tasting menu ~£75pp</div>
+        <a href="https://www.killiecrankie.house/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐ 1 Michelin Star · NEW 2026</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>1887 at The Torridon</h4>
+        <div class="food-loc">📍 Wester Ross, Highlands (detour from Loch Ness/Skye)</div>
+        <div class="food-desc">New star 2026! Stunning location on Upper Loch Torridon. Chef Danny Young's dishes celebrate exceptional Highland produce. Green Star for sustainability too.</div>
+        <div class="food-price">Tasting menu ~£95pp</div>
+        <a href="https://www.thetorridon.com/eat/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐ 1 Michelin Star</span><span class="food-badge food-badge-rooms">🛏️ 8 Rooms</span>
+        <h4>Cottage in the Wood</h4>
+        <div class="food-loc">📍 Whinlatter Forest, near Keswick (Days 11–13)</div>
+        <div class="food-desc">A hidden gem perched in the forest above Keswick. Tasting menu from local farms and foraged ingredients. 8 boutique rooms — perfect for a night off the van!</div>
+        <div class="food-price">Tasting menu ~£85pp</div>
+        <a href="https://www.thecottageinthewood.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐⭐⭐ 3 Michelin Stars</span>
+        <h4>L'Enclume</h4>
+        <div class="food-loc">📍 Cartmel, South Lakes (~45 min from Keswick)</div>
+        <div class="food-desc">Simon Rogan's legendary 3-star restaurant. Farm-to-fork perfection from their own 12-acre farm. The UK's best restaurant. A once-in-a-lifetime experience.</div>
+        <div class="food-price">Tasting menu ~£185pp</div>
+        <a href="https://www.lenclume.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-star">
+        <span class="food-badge food-badge-star">⭐ 1 Michelin Star</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>Pentonbridge Inn</h4>
+        <div class="food-loc">📍 Penton, near Carlisle (Day 11 route)</div>
+        <div class="food-desc">Right on the English-Scottish border, near the M6. Seasonal tasting menu with produce from their own gardens. Rooms available — possible campsite alternative on the drive south!</div>
+        <div class="food-price">Tasting menu ~£80pp</div>
+        <a href="https://www.pentonbridgeinn.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-area">
+    <div class="food-area-title">🍺 Outstanding Pubs & Gastropubs (with Rooms)</div>
+    <div class="food-grid">
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Gastropub</span><span class="food-badge food-badge-rooms">🛏️ 7 Rooms</span>
+        <h4>Edinbane Inn</h4>
+        <div class="food-loc">📍 Edinbane, Isle of Skye (Days 6–7)</div>
+        <div class="food-desc">Fantastic gastropub with 7 cosy rooms. Famous for Cullen Skink (best on Skye!), local venison, and Sunday roasts. Family-friendly, dogs welcome. Book ahead!</div>
+        <div class="food-price">Mains ~£15–25 · Rooms from ~£120/night</div>
+        <a href="https://edinbaneinn.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Historic Inn</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>Stein Inn</h4>
+        <div class="food-loc">📍 Stein, Isle of Skye (Days 6–7)</div>
+        <div class="food-desc">The oldest inn on Skye (18th century). Incredible lochside location — probably the best sunset pub in Scotland. Real ales, langoustines, local seafood.</div>
+        <div class="food-price">Mains ~£12–20 · Rooms available</div>
+        <a href="https://www.steininn.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Legendary Pub</span><span class="food-badge food-badge-rooms">🛏️ 23 Rooms</span>
+        <h4>Clachaig Inn</h4>
+        <div class="food-loc">📍 Glencoe (Day 10)</div>
+        <div class="food-desc">THE Glencoe pub. 365+ whiskies, 100+ Scottish gins, craft ales, roaring fires, live music sessions, and hearty Highland grub. 23 rooms — a proper mountain inn. Hugely family-friendly.</div>
+        <div class="food-price">Mains ~£12–20 · Rooms from ~£110/night</div>
+        <a href="https://clachaig.com/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Country Inn</span><span class="food-badge food-badge-rooms">🛏️ Rooms + Bunkhouse</span>
+        <h4>Kings House Hotel</h4>
+        <div class="food-loc">📍 Head of Glencoe (Day 10)</div>
+        <div class="food-desc">Recently refurbished 250-year-old inn in the most dramatic location in Scotland. Roaring fires, great food, and a bunkhouse option. On the West Highland Way.</div>
+        <div class="food-price">Rooms from ~£150 · Bunkhouse from ~£40pp</div>
+        <a href="https://www.kingshousehotel.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Coaching Inn</span><span class="food-badge food-badge-rooms">🛏️ 14 Rooms</span>
+        <h4>The Royal Oak</h4>
+        <div class="food-loc">📍 Keswick centre (Days 11–13)</div>
+        <div class="food-desc">18th-century coaching inn in the heart of Keswick. Smart rooms, atmospheric bar, excellent restaurant. Cumbrian ales and proper pub food after a day on the fells.</div>
+        <div class="food-price">Mains ~£12–18 · Rooms from ~£100/night</div>
+        <a href="https://www.royaloakkeswick.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card food-card-pub">
+        <span class="food-badge food-badge-pub">🍺 Country Pub</span><span class="food-badge food-badge-rooms">🛏️ Rooms</span>
+        <h4>The King's Head</h4>
+        <div class="food-loc">📍 Ravenstonedale, M6 J38 (Day 14 stopover)</div>
+        <div class="food-desc">Perfect for your Day 14 Midlands stopover! Delightful gastropub near the M6 with comfortable rooms. Great food, local ales, lovely walks nearby. Near Ullswater.</div>
+        <div class="food-price">Mains ~£14–22 · Rooms from ~£100/night</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="food-area">
+    <div class="food-area-title">🍴 More Great Foodie Stops Along the Route</div>
+    <div class="food-grid">
+      <div class="food-card">
+        <h4>Edinbane Lodge</h4>
+        <div class="food-loc">📍 Isle of Skye · 4 AA Rosettes · La Liste Top 1000</div>
+        <div class="food-desc">Chef Calum Montgomery's tasting menu in a restored 16th-century hunting lodge. The best fine dining on Skye. Rooms available.</div>
+        <a href="https://www.edinbanelodge.com/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card">
+        <h4>Three Chimneys</h4>
+        <div class="food-loc">📍 Colbost, Isle of Skye · World-famous · 5★ Rooms</div>
+        <div class="food-desc">40 years of exceptional Skye seafood in a stone cottage on Loch Dunvegan. Candle-lit, romantic. 6 luxury rooms next door ("The House Over-By").</div>
+        <a href="https://threechimneys.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card">
+        <h4>Cluanie Inn</h4>
+        <div class="food-loc">📍 Glen Shiel, A87 (Day 6, en route to Skye)</div>
+        <div class="food-desc">Remote Highland inn in the beautiful Glen Shiel valley. Traditional Scottish food, whisky bar, 13 rooms. Perfect lunch stop on the drive to Skye.</div>
+      </div>
+      <div class="food-card">
+        <h4>Tebay Services (Westmorland)</h4>
+        <div class="food-loc">📍 M6, between Glencoe & Keswick (Day 11)</div>
+        <div class="food-desc">Not your average motorway services! A proper farm shop and café with stunning views. Local produce, home baking, and a pond with ducks for the kids.</div>
+      </div>
+      <div class="food-card">
+        <h4>Heft</h4>
+        <div class="food-loc">📍 Old Dungeon Ghyll, Lake District · 1 Michelin Star</div>
+        <div class="food-desc">A 17th-century village pub turned Michelin star. Local Cumbrian Kevin Tickle's creative 10-course evening menu with cheeky dish names. 5 guest rooms too!</div>
+        <a href="https://www.heftrestaurant.co.uk/" target="_blank">Book online ↗</a>
+      </div>
+      <div class="food-card">
+        <h4>The Kirkstile Inn</h4>
+        <div class="food-loc">📍 Loweswater, Lake District (near Keswick)</div>
+        <div class="food-desc">Traditional Lakeland inn with own-brew beers, terrific food, cosy rooms, and walks from the doorstep. A proper, unpretentious Lake District pub.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUN FACTS -->
+<section class="section-wrap-narrow" id="funfacts">
+  <div class="section-header"><div class="section-label">For Little Explorers</div><div class="section-title">Fun Facts for 5-Year-Olds</div></div>
+  <div class="facts-grid">
+    <div class="fact-card"><div class="fact-emoji">🏛️</div><div class="fact-card-title">Roman Toilets!</div><div class="fact-card-text">At Housesteads Fort, Roman soldiers sat in a row (no doors!) and shared a sponge on a stick. The sponge was rinsed in a water channel between uses. Nearly 2,000 years old!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🦌</div><div class="fact-card-title">Clicking Reindeer</div><div class="fact-card-text">Reindeer knees CLICK when they walk — a tendon snapping over bone. Helps them find each other in blizzards. A reindeer can run 50 mph — faster than a car in town!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🦕</div><div class="fact-card-title">Dino Beach</div><div class="fact-card-text">Staffin's footprints are 170 million years old — made when Scotland was a tropical swamp! Scientists found prints from plant-eaters AND meat-eaters on the same beach.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🐉</div><div class="fact-card-title">Nessie's Bath</div><div class="fact-card-text">Loch Ness holds more water than all English and Welsh lakes combined. The first monster sighting was in 565 AD by monk Columba. The dark peat water means you can only see 1 metre deep!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🚂</div><div class="fact-card-title">Hogwarts Express</div><div class="fact-card-text">The Glenfinnan Viaduct: 21 arches, 30m high (6 houses!), 120+ years old. One of the first big concrete structures ever. The real Jacobite train burns coal and puffs real steam!</div></div>
+    <div class="fact-card"><div class="fact-emoji">⛰️</div><div class="fact-card-title">Shrinking Mountains</div><div class="fact-card-text">Scottish mountains were once taller than Everest! Ben Nevis snows ~100 days/year. Scientists lived in an observatory at the summit in the 1880s — now it's ruins you can explore.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🐿️</div><div class="fact-card-title">Forgetful Squirrels</div><div class="fact-card-text">Red squirrels hide 10,000 nuts but forget where HALF are. Those nuts grow into trees — they accidentally plant forests! They can jump 3 metres in one leap.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🧚</div><div class="fact-card-title">Fairy Glen Magic</div><div class="fact-card-text">Made by an ancient landslide creating tiny mountains. Legend says if you fall asleep in a fairy glen, you might wake up 100 years later! People leave tiny stone "fairy houses."</div></div>
+    <div class="fact-card"><div class="fact-emoji">🧗</div><div class="fact-card-title">Ancient Sea Floor</div><div class="fact-card-text">Lake District climbing rocks are slate from the bottom of a sea 450 million years ago. The same rock is used for roof tiles. You're climbing on what was the ocean floor!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🦅</div><div class="fact-card-title">Giant Eagles</div><div class="fact-card-text">Skye has white-tailed sea eagles — Britain's biggest bird! 2.4m wingspan — wider than your parents lying head to toe. They snatch fish from the sea with massive talons.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🏰</div><div class="fact-card-title">Castle Cannons</div><div class="fact-card-text">Bamburgh was one of the first castles attacked by cannons in 1464 — even they couldn't knock it down! The Pink Lady ghost walks the beach on stormy nights.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🌊</div><div class="fact-card-title">Mountain Beach</div><div class="fact-card-text">Loch Morlich has a sandy beach in the mountains! Left behind by a glacier thousands of years ago. It sometimes freezes in winter so people ice-skate on it.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🐑</div><div class="fact-card-title">Herdwick Heroes</div><div class="fact-card-text">Herdwick sheep in the Lake District are born jet black and turn grey as they grow up! They're the toughest sheep in Britain and always find their way home — even in snowstorms. Beatrix Potter bred them on her farm!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🌈</div><div class="fact-card-title">Skye's Name</div><div class="fact-card-text">The Isle of Skye gets its name from the Norse word "sky" meaning "cloud." The Vikings named it "Cloud Island" because the mountains are often wrapped in mist. Vikings ruled Skye for 400 years!</div></div>
+    <div class="fact-card"><div class="fact-emoji">🪨</div><div class="fact-card-title">Stone Circles</div><div class="fact-card-text">Near Keswick, Castlerigg Stone Circle is 5,000 years old — older than Stonehenge AND the pyramids of Egypt! Nobody knows exactly why ancient people built it, but it might have been a kind of calendar for farming.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🦭</div><div class="fact-card-title">Highland Seals</div><div class="fact-card-text">Scotland has about 90,000 grey seals — more than anywhere else in the world! You might spot them sunbathing on rocks near Skye. Baby seals are born with fluffy white fur and can swim within hours of being born.</div></div>
+    <div class="fact-card"><div class="fact-emoji">🥃</div><div class="fact-card-title">Whisky Water</div><div class="fact-card-text">Scotland has more whisky barrels maturing right now than it has people! There are about 22 million barrels sleeping in warehouses across the country, but only 5.5 million people. The Talisker distillery on Skye makes whisky from mountain water.</div></div>
+  </div>
+</section>
+
+<!-- PACKING -->
+<section class="section-wrap-narrow" id="packing">
+  <div class="section-header"><div class="section-label">Don't Forget</div><div class="section-title">Family Packing Checklist</div></div>
+  <div class="packing-grid">
+    <div class="packing-card"><h3>🧗 Climbing Gear</h3><label class="packing-item"><input type="checkbox"> Rope (60m+ single)</label><label class="packing-item"><input type="checkbox"> Quickdraws (12+)</label><label class="packing-item"><input type="checkbox"> Harnesses (×2 adult)</label><label class="packing-item"><input type="checkbox"> Climbing shoes (×2)</label><label class="packing-item"><input type="checkbox"> Belay device & locker</label><label class="packing-item"><input type="checkbox"> Helmets (×2)</label><label class="packing-item"><input type="checkbox"> Chalk & chalk bag</label><label class="packing-item"><input type="checkbox"> Crash pad (bouldering)</label></div>
+    <div class="packing-card"><h3>🥾 Hiking & Outdoor</h3><label class="packing-item"><input type="checkbox"> Walking boots (all)</label><label class="packing-item"><input type="checkbox"> Waterproof jackets (all)</label><label class="packing-item"><input type="checkbox"> Waterproof trousers (kids)</label><label class="packing-item"><input type="checkbox"> Wellies (kids)</label><label class="packing-item"><input type="checkbox"> Day rucksack</label><label class="packing-item"><input type="checkbox"> Child carrier backpack</label><label class="packing-item"><input type="checkbox"> Binoculars (Nessie!)</label><label class="packing-item"><input type="checkbox"> OS Maps</label></div>
+    <div class="packing-card"><h3>🏕️ Campervan Extras</h3><label class="packing-item"><input type="checkbox"> EHU cable</label><label class="packing-item"><input type="checkbox"> Levelling chocks</label><label class="packing-item"><input type="checkbox"> Extra blankets</label><label class="packing-item"><input type="checkbox"> Headtorches (all)</label><label class="packing-item"><input type="checkbox"> First aid kit</label><label class="packing-item"><input type="checkbox"> Midge nets & repellent</label><label class="packing-item"><input type="checkbox"> Camping chairs (×4)</label><label class="packing-item"><input type="checkbox"> Awning / tarp</label></div>
+    <div class="packing-card"><h3>👧 Kids Essentials</h3><label class="packing-item"><input type="checkbox"> Colouring books & crayons</label><label class="packing-item"><input type="checkbox"> Audiobooks (car)</label><label class="packing-item"><input type="checkbox"> Tablet + charger</label><label class="packing-item"><input type="checkbox"> Car snack box</label><label class="packing-item"><input type="checkbox"> Bug catcher pot</label><label class="packing-item"><input type="checkbox"> Fossil hunting guide</label><label class="packing-item"><input type="checkbox"> Cuddly toy!</label><label class="packing-item"><input type="checkbox"> Swim stuff</label></div>
+  </div>
+</section>
+
+<!-- QUICK LINKS SUMMARY -->
+<section class="links-section" id="quicklinks">
+  <div class="section-header"><div class="section-label">Everything in One Place</div><div class="section-title">Quick Links Summary</div></div>
+  <div class="links-grid">
+    <div class="links-card">
+      <h3>🗺️ Daily Drives</h3>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Basingstoke,+UK/Housesteads+Roman+Fort,+Hexham/Angel+of+the+North,+Gateshead/Newcastle+upon+Tyne,+UK" target="_blank">Day 1: Basingstoke → Newcastle</a><div class="link-desc">~290 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Newcastle+upon+Tyne,+UK/Bamburgh+Castle,+Northumberland/Edinburgh,+UK" target="_blank">Day 2: Newcastle → Edinburgh</a><div class="link-desc">~130 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Edinburgh,+UK/Glenmore+Campsite,+Aviemore" target="_blank">Day 3: Edinburgh → Aviemore</a><div class="link-desc">~155 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Glenmore+Campsite,+Aviemore/Dores+Beach/Urquhart+Castle/Loch+Ness+Shores+Camping" target="_blank">Day 5: Aviemore → Loch Ness</a><div class="link-desc">~35 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Loch+Ness+Shores+Camping/Fairy+Glen,+Isle+of+Skye/Glenbrittle+Campsite,+Isle+of+Skye" target="_blank">Day 6: Loch Ness → Skye</a><div class="link-desc">~115 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Glenbrittle+Campsite,+Isle+of+Skye/Camusdarach+Beach/Glenfinnan+Viaduct+Viewpoint/Glen+Nevis+Caravan+and+Camping+Park" target="_blank">Day 8: Skye → Fort William</a><div class="link-desc">~100 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Glen+Nevis+Caravan+and+Camping+Park/Glencoe+Lochan/Invercoe+Caravan+and+Camping+Park" target="_blank">Day 10: Fort William → Glencoe</a><div class="link-desc">~16 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Invercoe+Caravan+and+Camping+Park/Tebay+Services/Castlerigg+Hall+Caravan+and+Camping+Park" target="_blank">Day 11: Glencoe → Keswick</a><div class="link-desc">~185 mi</div></div>
+      <div class="link-row"><a href="https://www.google.com/maps/dir/Castlerigg+Hall+Caravan+and+Camping+Park/Basingstoke,+UK" target="_blank">Days 14–15: Keswick → Home</a><div class="link-desc">~280 mi</div></div>
+    </div>
+    <div class="links-card">
+      <h3>⛺ Campsites</h3>
+      <div class="link-row"><a href="https://www.campingandcaravanningclub.co.uk/campsites/uk/highland/aviemore/glenmore/" target="_blank">Glenmore, Cairngorms</a><div class="link-desc">2 nights</div></div>
+      <div class="link-row"><a href="https://www.lochnessshores.com/" target="_blank">Loch Ness Shores</a><div class="link-desc">1 night</div></div>
+      <div class="link-row"><a href="https://www.campsite-skye.com/" target="_blank">Glenbrittle, Skye</a><div class="link-desc">2 nights</div></div>
+      <div class="link-row"><a href="https://www.glen-nevis.co.uk/" target="_blank">Glen Nevis, Fort William</a><div class="link-desc">2 nights</div></div>
+      <div class="link-row"><a href="https://www.glencoecamp.com/" target="_blank">Invercoe, Glencoe</a><div class="link-desc">1 night</div></div>
+      <div class="link-row"><a href="https://www.castlerigghall.co.uk/" target="_blank">Castlerigg Hall, Keswick</a><div class="link-desc">3 nights</div></div>
+    </div>
+    <div class="links-card">
+      <h3>🎟️ Attractions</h3>
+      <div class="link-row"><a href="https://www.english-heritage.org.uk/visit/places/housesteads-roman-fort-hadrians-wall/" target="_blank">Housesteads Roman Fort</a></div>
+      <div class="link-row"><a href="https://www.bamburghcastle.com/" target="_blank">Bamburgh Castle</a></div>
+      <div class="link-row"><a href="https://www.cairngormreindeer.co.uk/" target="_blank">Cairngorm Reindeer</a></div>
+      <div class="link-row"><a href="https://www.landmarkpark.co.uk/" target="_blank">Landmark Adventure Park</a></div>
+      <div class="link-row"><a href="https://www.historicenvironment.scot/visit-a-place/places/urquhart-castle/" target="_blank">Urquhart Castle</a></div>
+      <div class="link-row"><a href="https://www.westcoastrailways.co.uk/jacobite/steam-train-trip" target="_blank">Jacobite Steam Train</a></div>
+      <div class="link-row"><a href="https://www.threewisemonkeysclimbing.com/" target="_blank">Three Wise Monkeys Climbing</a></div>
+      <div class="link-row"><a href="https://www.puzzlingplace.co.uk/" target="_blank">The Puzzling Place, Keswick</a></div>
+    </div>
+    <div class="links-card">
+      <h3>🧗 Climbing Crags</h3>
+      <div class="link-row"><a href="https://www.ukclimbing.com/logbook/crags/moy_rock-412" target="_blank">Moy Rock (Highlands)</a><div class="link-desc">F4–F7b</div></div>
+      <div class="link-row"><a href="https://www.ukclimbing.com/logbook/crags/bram_crag_quarry-2901" target="_blank">Bram Crag Quarry (Lakes)</a><div class="link-desc">F4–F7a+</div></div>
+      <div class="link-row"><a href="https://www.threewisemonkeysclimbing.com/" target="_blank">Three Wise Monkeys (Indoor)</a><div class="link-desc">Fort William</div></div>
+    </div>
+    <div class="links-card">
+      <h3>🥾 Walks</h3>
+      <div class="link-row"><a href="https://www.walkhighlands.co.uk/skye/oldmanofstorr.shtml" target="_blank">Old Man of Storr, Skye</a><div class="link-desc">~4km</div></div>
+      <div class="link-row"><a href="https://www.walkhighlands.co.uk/fortwilliam/glencoe-lochan.shtml" target="_blank">Glencoe Lochan</a><div class="link-desc">~1 mile</div></div>
+      <div class="link-row"><a href="https://www.walkhighlands.co.uk/lakedistrict/catbells.shtml" target="_blank">Catbells, Keswick</a><div class="link-desc">451m · 2hrs</div></div>
+    </div>
+    <div class="links-card">
+      <h3>🧒 Kids Activities</h3>
+      <div class="link-row"><a href="https://www.cairngormreindeer.co.uk/" target="_blank">Cairngorm Reindeer</a><div class="link-desc">Aviemore</div></div>
+      <div class="link-row"><a href="https://www.landmarkpark.co.uk/" target="_blank">Landmark Adventure Park</a><div class="link-desc">Aviemore</div></div>
+      <div class="link-row"><a href="https://www.highlandwildlifepark.org.uk/" target="_blank">Highland Wildlife Park</a><div class="link-desc">Aviemore</div></div>
+      <div class="link-row"><a href="https://www.strathspeyrailway.co.uk/" target="_blank">Strathspey Steam Railway</a><div class="link-desc">Aviemore</div></div>
+      <div class="link-row"><a href="https://www.cairngormmountain.co.uk/" target="_blank">Cairngorm Funicular + Tubing</a><div class="link-desc">Aviemore</div></div>
+      <div class="link-row"><a href="https://www.westcoastrailways.co.uk/jacobite/steam-train-trip" target="_blank">Jacobite Steam Train</a><div class="link-desc">Fort William</div></div>
+      <div class="link-row"><a href="https://www.kongadventure.co.uk/" target="_blank">Kong Adventure</a><div class="link-desc">Keswick</div></div>
+      <div class="link-row"><a href="https://www.puzzlingplace.co.uk/" target="_blank">The Puzzling Place</a><div class="link-desc">Keswick</div></div>
+      <div class="link-row"><a href="https://www.alpacalyeverafter.co.uk/" target="_blank">Alpacaly Ever After</a><div class="link-desc">Keswick</div></div>
+    </div>
+    <div class="links-card">
+      <h3>🍽️ Restaurants & Pubs</h3>
+      <div class="link-row"><a href="https://www.lochbay-restaurant.co.uk/" target="_blank">Loch Bay (1★, Skye)</a><div class="link-desc">Book ahead!</div></div>
+      <div class="link-row"><a href="https://www.killiecrankie.house/" target="_blank">Killiecrankie House (1★)</a><div class="link-desc">NEW 2026</div></div>
+      <div class="link-row"><a href="https://www.thecottageinthewood.co.uk/" target="_blank">Cottage in the Wood (1★)</a><div class="link-desc">Keswick</div></div>
+      <div class="link-row"><a href="https://www.lenclume.co.uk/" target="_blank">L'Enclume (3★)</a><div class="link-desc">Cartmel</div></div>
+      <div class="link-row"><a href="https://edinbaneinn.co.uk/" target="_blank">Edinbane Inn (pub + rooms)</a><div class="link-desc">Skye</div></div>
+      <div class="link-row"><a href="https://clachaig.com/" target="_blank">Clachaig Inn (pub + rooms)</a><div class="link-desc">Glencoe</div></div>
+      <div class="link-row"><a href="https://threechimneys.co.uk/" target="_blank">Three Chimneys (rooms)</a><div class="link-desc">Skye</div></div>
+      <div class="link-row"><a href="https://www.britstops.com/" target="_blank">Britstops (free pub parking)</a><div class="link-desc">~£30/yr</div></div>
+    </div>
+    <div class="links-card">
+      <h3>📍 Key Locations</h3>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Housesteads+Roman+Fort+-+Hadrian's+Wall/" target="_blank">📍 Housesteads Fort</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Angel+of+the+North/" target="_blank">📍 Angel of the North</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Fairy+Glen/" target="_blank">📍 Fairy Glen, Skye</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/An+Corran+Beach/" target="_blank">📍 Staffin Dino Beach</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Glenfinnan+Viaduct+Viewpoint/" target="_blank">📍 Glenfinnan Viaduct</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Three+Sisters+Viewpoint,+Glencoe/" target="_blank">📍 Three Sisters, Glencoe</a></div>
+      <div class="link-row"><a href="https://www.google.com/maps/place/Catbells/" target="_blank">📍 Catbells</a></div>
+      <div class="link-row"><a href="https://holyislandcrossingtimes.northumberland.gov.uk/" target="_blank">🌊 Holy Island Tide Times</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>Scotland, Skye & The Lakes 2026</strong>
+  <p style="margin-top:0.5rem">28 March – 11 April · 15 Days · ~1,200 miles of adventure</p>
+  <p style="margin-top:1rem;font-size:0.75rem;opacity:0.6">Distances/times are estimates. Book campsites in advance for Easter. Verify tide times, weather, and opening hours closer to the date.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-link').forEach(function(btn){
+  btn.addEventListener('click',function(e){
+    e.preventDefault();e.stopPropagation();
+    var t=this.getAttribute('data-target'),el=document.getElementById(t);
+    if(el){var n=document.getElementById('nav'),h=n?n.offsetHeight:60;window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-h-16,behavior:'smooth'})}
+    document.querySelectorAll('.nav-link').forEach(function(l){l.classList.remove('active')});
+    this.classList.add('active');return false;
+  });
+});
+var sids=['route','mapview','itinerary','finance','fooddrink','funfacts','packing','quicklinks'];
+window.addEventListener('scroll',function(){
+  var n=document.getElementById('nav'),h=n?n.offsetHeight:60,c='';
+  for(var i=0;i<sids.length;i++){var el=document.getElementById(sids[i]);if(el&&window.scrollY>=el.offsetTop-h-30)c=sids[i]}
+  document.querySelectorAll('.nav-link').forEach(function(l){l.classList.remove('active');if(l.getAttribute('data-target')===c)l.classList.add('active')});
+});
+function recalculate(){
+  var m=parseFloat(document.getElementById('calcMiles').value)||0,mpg=parseFloat(document.getElementById('calcMpg').value)||25,
+  d=parseFloat(document.getElementById('calcDiesel').value)||1.52,cn=parseFloat(document.getElementById('calcCamp').value)||39,
+  n=parseFloat(document.getElementById('calcNights').value)||10,f=parseFloat(document.getElementById('calcFood').value)||100,
+  dy=parseFloat(document.getElementById('calcDays').value)||15,a=parseFloat(document.getElementById('calcActivities').value)||250;
+  var fc=(m/mpg)*4.546*d,t=fc+(cn*n)+(f*dy)+a;
+  document.getElementById('fuelTotal').textContent='\u00A3'+Math.round(fc);
+  document.getElementById('calcTotal').textContent='\u00A3'+Math.round(t).toLocaleString();
+}
+document.querySelectorAll('.packing-item input[type="checkbox"]').forEach(function(cb){
+  cb.addEventListener('change',function(){this.closest('.packing-item').classList.toggle('checked',this.checked)});
+});
+recalculate();
+</script>
+</body>
+</html>
